@@ -6,12 +6,14 @@
 <body>
     <div class="container">
         <h2 class="form-title">Sign Up</h2>
-        <form class="signup-form">
-            <input type="text" placeholder="Username" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
+        <form class="signup-form" action="/signup" method="post">
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Password" name="password" required>
             <button type="submit">Sign Up</button>
         </form>
+        
     </div>
+    <script src="server.js"></script>
 </body>
 </html>
