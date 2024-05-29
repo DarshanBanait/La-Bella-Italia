@@ -32,20 +32,18 @@
         <h1 style="font-family: 'Garamond', serif;">Welcome to La Bella Italia</h1>
         <p>Authentic Italian Cuisine</p>
     </div>
-    <div id="map" style="height: 400px;"></div>
-
+   
+    
+    
+    <h2 style="justify-content: center; text-align: center;">What would You like to do?</h2>
     <div class="menu">
-        <h2>Our Menu</h2>
         <ul>
 
-            <li>Ravioli di Ricotta e Spinaci </li>
-            <li>Osso Buco alla Milanese </li>
-            <li>Gnocchi alla Sorrentina </li>
-            <li>Tiramisu </li>
-            <li>Panna Cotta </li>
-            <li>Pizza Margherita</li>
-            <li>Spaghetti Carbonara</li>
-            <li>Lasagna</li>
+            <li><a href="menu.html" style="color: black;"> Order Food</a></li><br>
+            <li><a href="BookTable.html"  style="color: black;">Book a table</a></li><br>
+            <li style="color: black;"> About Us</li><br>
+            <li style="color: black;">Our Specaility</li><br>
+            
         </ul>
     </div>
     <div class="contact">
@@ -55,15 +53,4 @@
     </div>
 </body>
 </html>
-<script>
-    var map = L.map('map').setView([YOUR_LATITUDE, YOUR_LONGITUDE], 14);
-    
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-    
-    var marker = L.marker([YOUR_LATITUDE, YOUR_LONGITUDE]).addTo(map);
-    marker.bindPopup("<b>Your Restaurant Name</b><br>Your restaurant address").openPopup();
-    </script>
-    
 

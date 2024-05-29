@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella Italia</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="BookTable.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        body {
+            align-items: center;
+            justify-content: center;
+            background-color: #fff4e6;
+        
+        }
+        .header {
+            color: #b33c00;
+            text-align: center;
+        }
+        .ui-datepicker {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    position: absolute;
+    z-index: 9999;
+  }
+  .ui-datepicker-header {
+    background-color: #f0f0f0;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+  }
+  .ui-datepicker-title {
+    font-weight: bold;
+    margin: 0;
+  }
+  .ui-datepicker-calendar {
+    margin: 0;
+    padding: 0;
+  }
+  .ui-datepicker-calendar th,
+  .ui-datepicker-calendar td {
+    padding: 5px;
+    text-align: center;
+  }
+  .ui-datepicker-calendar th {
+    font-weight: bold;
+  }
+</style>
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div style="text-align: right; margin: 10px;">
+    <style>
+        .header {
+            display: flex;
+            background-image: url('Food1.jpg');
+            background-size: cover;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+        </div>
+        <h1 style="font-family: 'Garamond', serif; width: 50%;">Book A Table</h1>
+    
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css">
+<style>
+  /* Style can be added here */
+</style>
+<br><br><br><br>
+
+<div class="Block">
+    
+    <div class="RegistrationForm">
+
+        <form action="/BookTable" onsubmit="submitForm() ; return false" id="redirectForm" method="POST">
+          <div>
+            <label for="persons">Number of Persons:</label>
+            <input type="number" id="persons" name="persons" min="1" required>
+          </div>
+          <br>
+          <div>
+            <label for="date">Date:</label>
+            <input type="text" id="date" name="date" required>
+          </div>
+          <br>
+          <div>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+          </div>
+          <br>
+          <button type="submit"  >Submit</button>
+        </form>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+      function submitForm() {
+    // Show confirmation pop-up
+    var confirmed = confirm("Booked");
+    
+    // If user confirms, redirect to index.html after a delay
+    if (confirmed) {
+      setTimeout(function() {
+        window.location.href = "index.html";
+      }, 2000); // 2000 milliseconds = 2 seconds
+    }
+  }
+  $( function() {
+    $( "#date" ).datepicker({
+      dateFormat: 'yy-mm-dd',
+      minDate: 0, // Set minimum date to today
+      onSelect: function(dateText, inst) {
+        // This function will be called when a date is selected
+        console.log("Selected Date:", dateText);
+      }
+    });
+  });
+</script>
+        
+        
+            
+    </div>
+</div>
